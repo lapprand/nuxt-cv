@@ -1,8 +1,8 @@
 <template lang="pug">
   v-app
     xsOnly(v-if='$vuetify.breakpoint.xsOnly')
-    smOnly(v-else-if='$vuetify.breakpoint.smOnly')
-    mdAndUp(v-else)
+    smOnly(v-if='$vuetify.breakpoint.smOnly')
+    mdAndUp(v-if='$vuetify.breakpoint.mdAndUp')
 
 </template>
 

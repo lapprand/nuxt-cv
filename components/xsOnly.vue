@@ -29,14 +29,14 @@
                   v-divider
                   v-row(justify='center')
                     v-col(cols='auto')
-                      v-btn(text @click.stop="goTo($t('info.github'))" small)
-                        v-icon.pr-2 mdi-contact-mail
+                      v-btn(icon @click.stop="goTo($t('info.github'))" small)
+                        v-icon mdi-contact-mail
                     v-col(cols='auto')
-                      v-btn(text @click.stop="goTo($t('info.github'))" small)
-                        v-icon.pr-2 mdi-github-box
+                      v-btn(icon @click.stop="goTo($t('info.github'))" small)
+                        v-icon mdi-github-box
                     v-col(cols='auto')
-                      v-btn(text @click.stop="goTo($t('info.github'))" small)
-                        v-icon.pr-2 mdi-linkedin-box
+                      v-btn(icon @click.stop="goTo($t('info.github'))" small)
+                        v-icon mdi-linkedin-box
       cards
 </template>
 
