@@ -13,6 +13,7 @@
             span.subtitle-1.font-weight-medium
               a(:href="$t('work.p2.url')") {{ $t('work.p2.title') }}
             p.body-2 {{ $t('work.p2.desc') }}
+    v-divider
     v-row
       v-col
         v-card.transparent(flat)
@@ -23,6 +24,7 @@
             span.subtitle-1.font-weight-medium {{ $t('education.degree') }}
             p.body-2 {{ $t('education.degreeDesc') }}
             p.body-2 {{ $t('education.internship') }}
+    v-divider
     v-row
       v-col
         v-card.transparent(flat)

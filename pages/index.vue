@@ -1,18 +1,21 @@
 <template lang="pug">
   v-app
-    smAndDown(v-if='$vuetify.breakpoint.smAndDown')
+    xsOnly(v-if='$vuetify.breakpoint.xsOnly')
+    smOnly(v-else-if='$vuetify.breakpoint.smOnly')
     mdAndUp(v-else)
 
 </template>
 
 <script>
 import mdAndUp from "~/components/mdAndUpCards"
-import smAndDown from "~/components/smAndDown"
+import smOnly from "~/components/smOnly"
+import xsOnly from "~/components/xsOnly"
 
 export default {
   components: {
     mdAndUp,
-    smAndDown
+    smOnly,
+    xsOnly
   }
 }
 </script>
