@@ -6,7 +6,7 @@ const pkg = require("./package")
 
 export default {
   head: {
-    title: pkg.name,
+    title: "Arthur Barros Lapprand",
     meta: [
       {
         charset: "utf-8"
