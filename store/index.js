@@ -8,7 +8,11 @@ export const getters = {
   getField
 }
 
-export const actions = {}
+export const actions = {
+  goTo(context, url) {
+    window.location = url
+  }
+}
 
 export const mutations = {
   updateField

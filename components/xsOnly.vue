@@ -22,20 +22,20 @@
                     v-col(cols='auto')
                       div.profile-wrap
                         v-img.profile(src='profile3.png' aspect-ratio="1" height="150px" width="150px")
-                  v-row
+                  v-row.white--text
                     v-col.text-center
                       div.mb-3.headline.font-weight-bold {{ $t('info.name') }}
                       div.mb-3.subtitle-1.font-weight-medium {{ $t('info.job') }}
                   v-divider
                   v-row(justify='center')
                     v-col(cols='auto')
-                      v-btn(icon @click.stop="goTo($t('info.github'))" small)
+                      v-btn(icon color='white' @click.stop="$store.dispatch('goTo', $t('info.email'))")
                         v-icon mdi-contact-mail
                     v-col(cols='auto')
-                      v-btn(icon @click.stop="goTo($t('info.github'))" small)
+                      v-btn(icon color='white' @click.stop="$store.dispatch('goTo', $t('info.github'))")
                         v-icon mdi-github-box
                     v-col(cols='auto')
-                      v-btn(icon @click.stop="goTo($t('info.github'))" small)
+                      v-btn(icon color='white' @click.stop="$store.dispatch('goTo', $t('info.linkedin'))")
                         v-icon mdi-linkedin-box
       cards
 </template>

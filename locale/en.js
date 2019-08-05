@@ -4,7 +4,7 @@ export default {
     job: "Full Stack & Android Developer",
     github: "https://github.com/lapprand",
     linkedin: "https://www.linkedin.com/in/lapprand/",
-    email: "lapprand@gmail.com"
+    email: "mailto:lapprand@gmail.com"
   },
   education: {
     title: "Education",
