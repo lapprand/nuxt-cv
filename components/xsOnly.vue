@@ -21,7 +21,7 @@
                   v-row(justify='center')
                     v-col(cols='auto')
                       div.profile-wrap
-                        v-img.profile(src='profile.webp' aspect-ratio="1" height="150px" width="150px")
+                        v-img.profile(:src='require("../static/profile.webp")' aspect-ratio="1" height="150px" width="150px")
                   v-row.white--text
                     v-col.text-center
                       div.mb-3.headline.font-weight-bold {{ $t('info.name') }}
