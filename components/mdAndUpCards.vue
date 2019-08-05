@@ -12,11 +12,11 @@
                       section.hidden-print-only
                         v-row(justify='center')
                           v-col(cols='auto')
-                            v-btn.mx-1(v-for='locale in $i18n.locales' :key="locale.code" :to='switchLocalePath(locale.code)' icon outlined)
+                            v-btn.mx-1(v-for='locale in $i18n.locales' :key="locale.code" :to='switchLocalePath(locale.code)' icon outlined color='white')
                               no-ssr
                                 v-icon(v-if="locale.code === 'pt'") $vuetify.icons.brFlag
                                 v-icon(v-if="locale.code === 'en'") $vuetify.icons.usFlag
-                            v-btn.mx-1(icon @click.stop='$vuetify.theme.dark = !$vuetify.theme.dark' outlined)
+                            v-btn.mx-1(@click.stop='$vuetify.theme.dark = !$vuetify.theme.dark' icon outlined color='white')
                               v-icon {{ invertColors }}
                   v-row(justify='center')
                     v-col(cols='auto')
