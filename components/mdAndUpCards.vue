@@ -30,7 +30,7 @@
   v-content
     v-container(fluid fill-height align-start)
       v-row.stretch(justify='center')
-        v-col(cols=4 align-self='stretch')
+        v-col(cols=5 lg=4 align-self='stretch')
           v-card.primary(height='100%')
             v-container(fluid fill-height align-start)
               v-row
@@ -72,7 +72,7 @@
                           v-btn(text @click.stop="goTo($t('info.github'))")
                             v-icon.pr-2 mdi-linkedin-box
                             span LinkedIn
-        v-col(cols=8 lg=6)
+        v-col(cols=7 lg=6)
           cards
 </template>
 

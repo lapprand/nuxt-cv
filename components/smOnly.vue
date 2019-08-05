@@ -16,18 +16,15 @@
                       div.mb-3.display-1.font-weight-bold {{ $t('info.name') }}
                       div.mb-3.title.font-weight-medium {{ $t('info.job') }}
                 v-divider(vertical)
-                v-col(cols='auto')
-                  v-row
-                    v-col
-                      section.hidden-print-only
-                        v-row(justify='center')
-                          v-col(cols='auto')
-                            v-btn.mx-1(v-for='locale in $i18n.locales' :key="locale.code" :to='switchLocalePath(locale.code)' icon outlined)
-                              no-ssr
-                                v-icon(v-if="locale.code === 'pt'") $vuetify.icons.brFlag
-                                v-icon(v-if="locale.code === 'en'") $vuetify.icons.usFlag
-                            v-btn.mx-1(icon @click.stop='$vuetify.theme.dark = !$vuetify.theme.dark' outlined)
-                              v-icon {{ invertColors }}
+                v-col(cols='auto' align-self='center')
+                  v-row.hidden-print-only(justify='center')
+                    v-col(cols='auto')
+                      v-btn.mx-1(v-for='locale in $i18n.locales' :key="locale.code" :to='switchLocalePath(locale.code)' icon outlined)
+                        no-ssr
+                          v-icon(v-if="locale.code === 'pt'") $vuetify.icons.brFlag
+                          v-icon(v-if="locale.code === 'en'") $vuetify.icons.usFlag
+                      v-btn.mx-1(icon @click.stop='$vuetify.theme.dark = !$vuetify.theme.dark' outlined)
+                        v-icon {{ invertColors }}
                   v-row
                     v-col.text-start
                       v-btn(text @click.stop="goTo($t('info.github'))")
