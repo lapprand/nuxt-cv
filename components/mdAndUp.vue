@@ -49,7 +49,7 @@
                   v-row(justify='center')
                     v-col(cols='auto')
                       div.profile-wrap
-                        v-img.profile(src='profile3.png' aspect-ratio="1" height="200px" width="200px")
+                        v-img.profile(src='profile3.png' aspect-ratio="1" contain height="200px" width="200px")
                   v-row
                     v-col.text-center
                       div.mb-3.display-1.font-weight-bold {{ $t('info.name') }}
