@@ -41,7 +41,7 @@
                         v-row(justify='center')
                           v-col(cols='auto')
                             v-btn.mx-1(v-for='locale in $i18n.locales' :key="locale.code" :to='switchLocalePath(locale.code)' icon outlined)
-                              no-ssr
+                              client-only
                                 v-icon(v-if="locale.code === 'pt'") $vuetify.icons.brFlag
                                 v-icon(v-if="locale.code === 'en'") $vuetify.icons.usFlag
                             v-btn.mx-1(icon @click.stop='$vuetify.theme.dark = !$vuetify.theme.dark' outlined)

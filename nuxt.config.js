@@ -21,19 +21,14 @@ export default {
         content: pkg.description
       }
     ],
-    link: [
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Montserrat"
-      }
-    ]
+    link: []
   },
   plugins: [
     { src: "~/plugins/vuexPersistedState.js", mode: "client" },
     { src: "~/plugins/vueFlagIcon.js", mode: "client" }
   ],
   modules: ["nuxt-i18n"],
-  devModules: ["@nuxtjs/vuetify"],
+  buildModules: ["@nuxtjs/vuetify"],
 
   i18n: {
     locales: [
@@ -59,7 +54,9 @@ export default {
   // Vuetify options
   vuetify: {
     defaultAssets: {
-      font: true,
+      font: {
+        family: "Roboto"
+      },
       icons: "mdi"
     },
     icons: {
@@ -79,10 +76,6 @@ export default {
       }
     },
     theme: {
-      // lang: {
-      //   locales: { en, pt },
-      //   current: "pt"
-      // },
       dark: false,
       themes: {
         light: {
