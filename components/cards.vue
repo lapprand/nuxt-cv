@@ -7,15 +7,10 @@
             v-icon(left) mdi-briefcase
             span {{ $t('work.title') }}
           v-container
-            span.subtitle-1.font-weight-medium
-              a(:href="$t('work.p3.url')") {{ $t('work.p3.title') }}
-            p.body-2 {{ $t('work.p3.desc') }}
-            span.subtitle-1.font-weight-medium
-              a(:href="$t('work.p1.url')") {{ $t('work.p1.title') }}
-            p.body-2 {{ $t('work.p1.desc') }}
-            span.subtitle-1.font-weight-medium
-              a(:href="$t('work.p2.url')") {{ $t('work.p2.title') }}
-            p.body-2 {{ $t('work.p2.desc') }}
+            template(v-for="work in $t('work.projects')")
+              span.subtitle-1.font-weight-medium
+                a(:href="work.url") {{ work.title }}
+              p.body-2(v-html='work.desc')
     v-divider
     v-row
       v-col
