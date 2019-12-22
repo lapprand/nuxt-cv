@@ -26,29 +26,32 @@ export default {
     projects: [
       {
         type: "Experiência profissional",
-        title: "Dra Julia / PequenasCausas",
-        url: "drajulia.com.br",
+        title: "<a href='drajulia.com.br'>Dra Julia / PequenasCausas</a>",
         desc:
-          "Web App e site desenvolvidos em equipe de desenvolvimento ágil na <a href='https://beyondcloud.com.br'>Beyond Cloud</a>. Implementa a stack Vue.js + Vuetify + Node.js + Google Cloud Platform (Cloud Build, Cloud Run, Firestore, Cloud Storage, Container Registry). O projeto tem como objetivo permitir a criação de modelos jurídicos com perguntas personalizadas para que os usuários possam responder, gerando assim seu documento. O documento também é protocolado de forma automatizada e de baixo custo."
+          "Web App e site desenvolvidos em equipe de desenvolvimento ágil na <a href='https://beyondcloud.com.br'>Beyond Cloud</a>. Implementa a stack Vue.js + Vuetify + Node.js + Google Cloud Platform (Cloud Build, Cloud Run, Firestore, Cloud Functions, Cloud Storage, Container Registry). O projeto tem como objetivo permitir a criação de modelos jurídicos com perguntas personalizadas para que os usuários possam responder, gerando assim seu documento. O documento também é protocolado de forma automatizada e de baixo custo."
+      },
+      {
+        type: "Experiência profissional",
+        title: "GlicoCONNECT",
+        desc:
+          "Desenvolvido na linguagem de programação Kotlin com Android Studio e componentes do <a href='https://developer.android.com/jetpack'>Android Jetpack</a>, é um aplicativo de gerenciamento e visualização de medições de glicose sanguínea. O app também permite ler medições de um leitor de glicose bluetooth (BLE) específico do contratante, bem como segue design e API especificados por ele."
       },
       {
         type: "Pessoal",
-        title: "Manga Material",
-        url: "https://manga-material.netlify.com/",
+        title:
+          "<a href='https://manga-material.netlify.com/'>Manga Material</a>",
         desc:
           "Projeto pessoal implementado para aprender mais sobre material design, JavaScript, TypeScript, SASS e webpack. O site conta com recursos como lazy loading de imagens, scroll infinito e gerenciamento de estado. Ele serve como um 'client' para a API Jikan. Além de adicionar estilos próprios ao site, segue-se algumas guias de Material Design sugeridas pelos 'Material Components' para a web."
       },
       {
         type: "Pessoal",
-        title: "Meu CV antigo",
-        url: "https://lapp-old-cv.netlify.com/",
+        title: "<a href='https://lapp-old-cv.netlify.com/'>Meu CV antigo</a>",
         desc:
           "Um currículo simples que fiz. Contém animação de introdução e outros estilos."
       },
       {
         type: "Durante graduação",
-        title: "Polderoso",
-        url: "https://youtu.be/MN_Y9e7Y17s",
+        title: "<a href='https://youtu.be/MN_Y9e7Y17s'>Polderoso</a>",
         desc:
           "Aplicativo desenvolvido em disciplina sobre Android durante a graduação. O conceito do aplicativo é, através da geolocalização, possibilitar a compra de comida em praças de alimentação. Similar ao iFood, mas sem delivery pois o consumo é realizado no local."
       }
