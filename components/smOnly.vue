@@ -53,19 +53,7 @@ export default {
   data() {
     return {
       extended: false,
-      invertColors: "mdi-invert-colors",
-      tabs: [
-        {
-          id: 0,
-          name: "Sobre",
-          icon: "mdi-account"
-        },
-        {
-          id: 1,
-          name: "Projetos",
-          icon: "mdi-folder-multiple"
-        }
-      ]
+      invertColors: "mdi-invert-colors"
     }
   },
   computed: {

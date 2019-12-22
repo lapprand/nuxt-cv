@@ -8,9 +8,14 @@
             span {{ $t('work.title') }}
           v-container
             template(v-for="work in $t('work.projects')")
-              span.subtitle-1.font-weight-medium
-                a(:href="work.url") {{ work.title }}
-              p.body-2(v-html='work.desc')
+              v-row(dense)
+                v-col
+                  span.subtitle-1.font-weight-medium.pr-3
+                    a(:href="work.url") {{ work.title }}
+                  v-chip(x-small) {{ work.type }}
+              v-row(dense)
+                v-col
+                  p.body-2(v-html='work.desc')
     v-divider
     v-row
       v-col

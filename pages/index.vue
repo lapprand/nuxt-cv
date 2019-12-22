@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import mdAndUp from "~/components/mdAndUpCards"
+import mdAndUp from "~/components/mdAndUp"
 import smOnly from "~/components/smOnly"
 import xsOnly from "~/components/xsOnly"
 

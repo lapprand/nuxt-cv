@@ -25,24 +25,28 @@ export default {
     title: "Projetos e Experiências",
     projects: [
       {
+        type: "Experiência profissional",
         title: "Dra Julia / PequenasCausas",
         url: "drajulia.com.br",
         desc:
           "Web App e site desenvolvidos em equipe de desenvolvimento ágil na <a href='https://beyondcloud.com.br'>Beyond Cloud</a>. Implementa a stack Vue.js + Vuetify + Node.js + Google Cloud Platform (Cloud Build, Cloud Run, Firestore, Cloud Storage, Container Registry). O projeto tem como objetivo permitir a criação de modelos jurídicos com perguntas personalizadas para que os usuários possam responder, gerando assim seu documento. O documento também é protocolado de forma automatizada e de baixo custo."
       },
       {
+        type: "Pessoal",
         title: "Manga Material",
         url: "https://manga-material.netlify.com/",
         desc:
           "Projeto pessoal implementado para aprender mais sobre material design, JavaScript, TypeScript, SASS e webpack. O site conta com recursos como lazy loading de imagens, scroll infinito e gerenciamento de estado. Ele serve como um 'client' para a API Jikan. Além de adicionar estilos próprios ao site, segue-se algumas guias de Material Design sugeridas pelos 'Material Components' para a web."
       },
       {
+        type: "Pessoal",
         title: "Meu CV antigo",
         url: "https://lapp-old-cv.netlify.com/",
         desc:
           "Um currículo simples que fiz. Contém animação de introdução e outros estilos."
       },
       {
+        type: "Durante graduação",
         title: "Polderoso",
         url: "https://youtu.be/MN_Y9e7Y17s",
         desc:

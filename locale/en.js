@@ -25,23 +25,27 @@ export default {
     title: "Projects and Experience",
     projects: [
       {
+        type: "Professional experience",
         title: "Dra Julia / PequenasCausas",
         url: "drajulia.com.br",
         desc:
           "Web App and site developed in an agile team at <a href='https://beyondcloud.com.br'>Beyond Cloud</a>. It is implemented with Vue.js + Vuetify + Node.js + Google Cloud Platform (Cloud Build, Cloud Run, Firestore, Cloud Storage, Container Registry). The project enables the user to build legal document templates and define personalized questions. The consumer can then answer those questions to generate the final document. There is also an automator which takes the document and registers it in the proper legal entity at a low cost."
       },
       {
+        type: "Personal",
         title: "Manga Material",
         url: "https://manga-material.netlify.com/",
         desc:
           "A site I created for the sake of learning more about Material Design, JavaScript, TypeScript, SASS/SCSS and Webpack. It also features lazy loading of images, infinite scroll and state management. It acts as a client for the Jikan API. I used a mix of Google's Material Design and my own styles."
       },
       {
+        type: "Personal",
         title: "My old CV",
         url: "https://lapp-old-cv.netlify.com/",
         desc: "Simple CV I made with a starting animation and other styles."
       },
       {
+        type: "Under graduation",
         title: "Polderoso",
         url: "https://youtu.be/MN_Y9e7Y17s",
         desc:
