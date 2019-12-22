@@ -1,4 +1,7 @@
 export default {
+  defaults: {
+    close: "Fechar"
+  },
   info: {
     name: "Arthur Barros Lapprand",
     job: "Desenvolvedor para a nuvem e desenvolvedor Android",
@@ -34,7 +37,18 @@ export default {
         type: "Experiência profissional",
         title: "GlicoCONNECT",
         desc:
-          "Desenvolvido na linguagem de programação Kotlin com Android Studio e componentes do <a href='https://developer.android.com/jetpack'>Android Jetpack</a>, é um aplicativo de gerenciamento e visualização de medições de glicose sanguínea. O app também permite ler medições de um leitor de glicose bluetooth (BLE) específico do contratante, bem como segue design e API especificados por ele."
+          "Desenvolvido na linguagem de programação Kotlin com Android Studio e componentes do <a href='https://developer.android.com/jetpack'>Android Jetpack</a>, é um aplicativo de gerenciamento e visualização de medições de glicose sanguínea. O app também permite ler medições de um leitor de glicose bluetooth (BLE) específico do contratante, bem como segue design e API especificados por ele.",
+        images: [
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-160909.png",
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-161010.png",
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-161111.png",
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-161153.png",
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-161223.png",
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-161256.png",
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-161357.png",
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-161442.png",
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-161456.png"
+        ]
       },
       {
         type: "Pessoal",

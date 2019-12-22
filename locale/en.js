@@ -1,4 +1,7 @@
 export default {
+  defaults: {
+    close: "Close"
+  },
   info: {
     name: "Arthur Barros Lapprand",
     job: "Cloud & Android Developer",
@@ -35,7 +38,18 @@ export default {
         title: "GlicoCONNECT",
         url: "",
         desc:
-          "Developed with the Kotlin programming language, Android Studio and <a href='https://developer.android.com/jetpack'>Android Jetpack</a> components, this app enables the user to visualize and manage blood glucose levels. It also allows reading glucose measurements from manufacturer specific BLE device. The app follows design and API specified by the client."
+          "Developed with the Kotlin programming language, Android Studio and <a href='https://developer.android.com/jetpack'>Android Jetpack</a> components, this app enables the user to visualize and manage blood glucose levels. It also allows reading glucose measurements from manufacturer specific BLE device. The app follows design and API specified by the client.",
+        images: [
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-160909.png",
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-161010.png",
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-161111.png",
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-161153.png",
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-161223.png",
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-161256.png",
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-161357.png",
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-161442.png",
+          "https://storage.googleapis.com/cv-project-images/device-2019-09-23-161456.png"
+        ]
       },
       {
         type: "Personal",
