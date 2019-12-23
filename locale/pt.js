@@ -29,7 +29,8 @@ export default {
     projects: [
       {
         type: "Experiência profissional",
-        title: "<a href='drajulia.com.br'>Dra Julia / PequenasCausas</a>",
+        title:
+          "<a href='https://drajulia.com.br'>Dra Julia / PequenasCausas</a>",
         desc:
           "Web App e site desenvolvidos em equipe de desenvolvimento ágil na <a href='https://beyondcloud.com.br'>Beyond Cloud</a>. Implementa a stack Vue.js + Vuetify + Node.js + Google Cloud Platform (Cloud Build, Cloud Run, Firestore, Cloud Functions, Cloud Storage, Container Registry). O projeto tem como objetivo permitir a criação de modelos jurídicos com perguntas personalizadas para que os usuários possam responder, gerando assim seu documento. O documento também é protocolado de forma automatizada e de baixo custo."
       },
