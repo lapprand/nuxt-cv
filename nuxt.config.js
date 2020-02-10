@@ -25,7 +25,8 @@ export default {
   },
   plugins: [
     { src: "~/plugins/vuexPersistedState.js", mode: "client" },
-    { src: "~/plugins/vueFlagIcon.js", mode: "client" }
+    { src: "~/plugins/vueFlagIcon.js", mode: "client" },
+    { src: "~/plugins/vuePerfectScrollbar.js", mode: "client" }
   ],
   modules: ["nuxt-i18n"],
   buildModules: ["@nuxtjs/vuetify"],

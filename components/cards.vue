@@ -1,6 +1,6 @@
 <template lang="pug">
   section
-    v-row
+    v-row(no-gutters)
       v-col
         v-card.transparent(flat)
           v-card-title
@@ -19,7 +19,7 @@
                 v-col(cols="auto")
                   ImageSlideGroup(:images='work.images' :imageItemWidth='60' :onItemClick='openImageDialog')
     v-divider
-    v-row
+    v-row(no-gutters)
       v-col
         v-card.transparent(flat)
           v-card-title
@@ -30,7 +30,7 @@
             p.body-2 {{ $t('education.degreeDesc') }}
             p.body-2 {{ $t('education.internship') }}
     v-divider
-    v-row
+    v-row(no-gutters)
       v-col
         v-card.transparent(flat)
           v-card-title

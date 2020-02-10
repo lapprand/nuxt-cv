@@ -1,3 +1,9 @@
+<style lang="scss" scoped>
+.cards-scroll-area {
+  height: calc(100vh - 48px);
+}
+</style>
+
 <template lang="pug">
   v-content
     v-container(fluid fill-height align-start)
@@ -45,7 +51,8 @@
                             v-icon.pr-2 mdi-linkedin-box
                             span LinkedIn
         v-col(cols=7 lg=6)
-          cards
+          perfect-scrollbar.cards-scroll-area
+            cards
 </template>
 
 <script>
