@@ -7,17 +7,7 @@
             v-container.pa-0(fluid fill-height align-start)
               v-row(no-gutters)
                 v-col
-                  v-row
-                    v-col
-                      section.hidden-print-only
-                        v-row(justify='center')
-                          v-col(cols='auto')
-                            v-btn.mx-1(v-for='locale in $i18n.locales' :key="locale.code" :to='switchLocalePath(locale.code)' icon large outlined color='white')
-                              client-only
-                                v-icon(v-if="locale.code === 'pt'") $vuetify.icons.brFlag
-                                v-icon(v-if="locale.code === 'en'") $vuetify.icons.usFlag
-                            v-btn.mx-1(@click.stop='$vuetify.theme.dark = !$vuetify.theme.dark' icon large outlined color='white')
-                              v-icon {{ invertColors }}
+                  optionBtns
                   v-row(justify='center')
                     v-col(cols='auto')
                       div.profile-wrap
@@ -42,23 +32,12 @@
 
 <script>
 import cards from "./cards"
+import optionBtns from "./optionBtns"
 
 export default {
   components: {
-    cards: cards
-  },
-  data() {
-    return {
-      extended: false,
-      invertColors: "mdi-invert-colors"
-    }
-  },
-  computed: {
-    availableLocales() {
-      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
-    }
-  },
-  mounted() {},
-  methods: {}
+    cards: cards,
+    optionBtns: optionBtns
+  }
 }
 </script>
