@@ -2,7 +2,7 @@
   section
     v-row(no-gutters)
       v-col
-        v-card.transparent(flat)
+        v-card.mb-4(outlined)
           v-card-title
             v-icon(left) mdi-briefcase
             span {{ $t('work.title') }}
@@ -18,10 +18,9 @@
               v-row.pb-4(v-if='work.images' dense justify='center')
                 v-col(cols="auto")
                   ImageSlideGroup(:images='work.images' :imageItemWidth='60' :onItemClick='openImageDialog')
-    v-divider
     v-row(no-gutters)
       v-col
-        v-card.transparent(flat)
+        v-card.mb-4(outlined)
           v-card-title
             v-icon(left) mdi-school
             span {{ $t('education.title') }}
@@ -29,10 +28,9 @@
             span.subtitle-1.font-weight-medium {{ $t('education.degree') }}
             p.body-2 {{ $t('education.degreeDesc') }}
             p.body-2 {{ $t('education.internship') }}
-    v-divider
     v-row(no-gutters)
       v-col
-        v-card.transparent(flat)
+        v-card.mb-4(outlined)
           v-card-title
             v-icon(left) mdi-account
             span {{ $t('interests.title') }}
