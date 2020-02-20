@@ -37,14 +37,14 @@
           v-container
             p.body-2 {{ $t('interests.p1') }}
             p.body-2 {{ $t('interests.p2') }}
-    v-dialog(v-model='isImageDialogOpened' max-width="600")
+    v-dialog(v-model='isImageDialogOpened' max-width="600" :fullscreen='isMobile')
       v-card()
         v-container
           v-row(justify='center')
             v-col(cols='auto')
-              v-img(:src='selectedImg')
-          v-row()
-            v-col.d-flex.justify-end
+              v-img(:src='selectedImg' max-height='83vh' contain)
+          v-row(justify='end')
+            v-col(cols='auto')
               v-btn(@click="isImageDialogOpened = false" outlined color='primary') {{ $t('defaults.close') }}
 </template>
 
@@ -60,6 +60,11 @@ export default {
       isImageDialogOpened: false,
       slideGroup: null,
       selectedImg: ""
+    }
+  },
+  computed: {
+    isMobile() {
+      return this.$vuetify.breakpoint.xsOnly
     }
   },
   methods: {
