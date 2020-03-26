@@ -18,26 +18,42 @@
                       div.mb-3.subtitle-1.font-weight-medium {{ $t('info.job') }}
                   v-divider
                   v-row(justify='center')
-                    v-col(cols='auto')
-                      v-btn(icon color='white' @click.stop="$store.dispatch('goTo', $t('info.email'))")
-                        v-icon mdi-contact-mail
-                    v-col(cols='auto')
-                      v-btn(icon color='white' @click.stop="$store.dispatch('goTo', $t('info.github'))")
-                        v-icon mdi-github-box
-                    v-col(cols='auto')
-                      v-btn(icon color='white' @click.stop="$store.dispatch('goTo', $t('info.linkedin'))")
-                        v-icon mdi-linkedin-box
+                    v-col(v-for="(infoBtn, index) of infoBtns" :key='index' cols='auto')
+                      InfoBtn(:icon="infoBtn.icon" :text="infoBtn.text" @click="infoBtn.action")
       cards
 </template>
 
 <script>
 import cards from "./cards"
 import optionBtns from "./optionBtns"
+import InfoBtn from "./buttons/InfoBtn"
 
 export default {
   components: {
     cards: cards,
-    optionBtns: optionBtns
+    optionBtns: optionBtns,
+    InfoBtn
+  },
+  data() {
+    return {
+      infoBtns: [
+        {
+          icon: "mdi-email",
+          text: "lapprand@gmail.com",
+          action: () => this.$store.dispatch("goTo", this.$t("info.email"))
+        },
+        {
+          icon: "mdi-github",
+          text: "GitHub",
+          action: () => this.$store.dispatch("goTo", this.$t("info.github"))
+        },
+        {
+          icon: "mdi-linkedin",
+          text: "LinkedIn",
+          action: () => this.$store.dispatch("goTo", this.$t("info.linkedin"))
+        }
+      ]
+    }
   }
 }
 </script>

@@ -25,21 +25,9 @@
                   v-divider
                   v-row(justify='center')
                     v-col(cols='auto')
-                      v-row
+                      v-row(v-for="(infoBtn, index) of infoBtns" :key='index')
                         v-col.text-start
-                          v-btn(text color='white' @click.stop="$store.dispatch('goTo', $t('info.email'))")
-                            v-icon.pr-2 mdi-contact-mail
-                            span lapprand@gmail.com
-                      v-row
-                        v-col.text-start
-                          v-btn(text color='white' @click.stop="$store.dispatch('goTo', $t('info.github'))")
-                            v-icon.pr-2 mdi-github-box
-                            span GitHub
-                      v-row
-                        v-col.text-start
-                          v-btn(text color='white' @click.stop="$store.dispatch('goTo', $t('info.linkedin'))")
-                            v-icon.pr-2 mdi-linkedin-box
-                            span LinkedIn
+                          InfoBtn(:icon="infoBtn.icon" :text="infoBtn.text" @click="infoBtn.action")
         v-col(cols=7 lg=6)
           perfect-scrollbar.cards-scroll-area
             cards
@@ -48,11 +36,34 @@
 <script>
 import cards from "./cards"
 import optionBtns from "./optionBtns"
+import InfoBtn from "./buttons/InfoBtn"
 
 export default {
   components: {
     cards: cards,
-    optionBtns: optionBtns
+    optionBtns: optionBtns,
+    InfoBtn
+  },
+  data() {
+    return {
+      infoBtns: [
+        {
+          icon: "mdi-email",
+          text: "lapprand@gmail.com",
+          action: () => this.$store.dispatch("goTo", this.$t("info.email"))
+        },
+        {
+          icon: "mdi-github",
+          text: "GitHub",
+          action: () => this.$store.dispatch("goTo", this.$t("info.github"))
+        },
+        {
+          icon: "mdi-linkedin",
+          text: "LinkedIn",
+          action: () => this.$store.dispatch("goTo", this.$t("info.linkedin"))
+        }
+      ]
+    }
   }
 }
 </script>
