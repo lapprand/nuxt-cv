@@ -42,7 +42,7 @@ export default {
       {
         type: "Profissional",
         title:
-          "<a href='https://drajulia.com.br'>Dra Julia / PequenasCausas</a>",
+          "<a href='https://drajulia.com.br/login'>Dra Julia / PequenasCausas</a>",
         desc:
           "Web App e site desenvolvidos em equipe de desenvolvimento ágil. Implementa a stack Vue.js + Vuetify + Node.js + Google Cloud Platform (Cloud Build, Cloud Run, Firestore, Cloud Functions, Cloud Storage, Container Registry). O projeto tem como objetivo permitir a criação de modelos jurídicos com perguntas personalizadas para que os usuários possam responder, gerando assim seu documento. O documento também é protocolado de forma automatizada e de baixo custo."
       },

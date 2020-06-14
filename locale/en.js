@@ -42,7 +42,7 @@ export default {
       {
         type: "Professional",
         title:
-          "<a href='https://drajulia.com.br'>Dra Julia / PequenasCausas</a>",
+          "<a href='https://drajulia.com.br/login'>Dra Julia / PequenasCausas</a>",
         desc:
           "Web App and site developed in an agile team. It is implemented with Vue.js + Vuetify + Node.js + Google Cloud Platform (Cloud Build, Cloud Run, Firestore, Cloud Functions, Cloud Storage, Container Registry). The project enables the user to build legal document templates and define personalized questions. The consumer can then answer those questions to generate the final document. There is also an automator which takes the document and registers it in the proper legal entity at a low cost."
       },
