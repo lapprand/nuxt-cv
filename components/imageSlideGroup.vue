@@ -26,7 +26,12 @@
 
 <script>
 import ImagePlaceholder from "./imagePlaceholder"
+import { Touch } from "vuetify/lib/directives"
+
 export default {
+  directives: {
+    Touch
+  },
   components: {
     ImagePlaceholder
   },
