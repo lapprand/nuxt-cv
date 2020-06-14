@@ -86,7 +86,7 @@ export default {
           error: colors.red.accent3
         },
         dark: {
-          primary: colors.teal,
+          primary: colors.lightGreen.darken1,
           secondary: colors.grey.darken1,
           accent: colors.shades.black,
           error: colors.red.accent3

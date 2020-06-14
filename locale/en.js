@@ -17,25 +17,37 @@ export default {
     internship:
       "Obligatory internship was completed in a research project between the Department of Computer Science (CIn-UFPE), the University of Michigan (UMICH) and the University of Illinois (ILLINOIS). This internship focused on studying, testing and applying reverse engineering techniques on firmwares for IoT devices, while exploring security failures."
   },
-  interests: {
-    title: "Profile and Interests",
-    p1:
-      "I like exploring new technologies for the web, but for the most part I work with the Vue.js JavaScript framework and Google Cloud Platform services. Also, a lot of Vuetify.",
-    p2:
-      "As for mobile, I have worked with Java and Kotlin for Android. As of this moment, I'm leading the development of a glucose management app in a freelance project."
+  experience: {
+    title: "Experience",
+    jobs: [
+      {
+        title: "Cloud Developer",
+        company: "<a href='https://beyondcloud.com.br'>Beyond Cloud</a>",
+        descriptions: [
+          "Front-end, Back-end and DevOps work using cloud technologies.",
+          "Work on projects/solutions based on the client’s needs, from the data in the cloud up to the site/app and API.",
+          "Mentoring for trainee/intern newcomers."
+        ]
+      },
+      {
+        title: "Android Developer",
+        company: null,
+        descriptions: ["Work with Android Java and Kotlin."]
+      }
+    ]
   },
   work: {
-    title: "Projects and Experience",
+    title: "Projects",
     projects: [
       {
-        type: "Professional experience",
+        type: "Professional",
         title:
           "<a href='https://drajulia.com.br'>Dra Julia / PequenasCausas</a>",
         desc:
-          "Web App and site developed in an agile team at <a href='https://beyondcloud.com.br'>Beyond Cloud</a>. It is implemented with Vue.js + Vuetify + Node.js + Google Cloud Platform (Cloud Build, Cloud Run, Firestore, Cloud Functions, Cloud Storage, Container Registry). The project enables the user to build legal document templates and define personalized questions. The consumer can then answer those questions to generate the final document. There is also an automator which takes the document and registers it in the proper legal entity at a low cost."
+          "Web App and site developed in an agile team. It is implemented with Vue.js + Vuetify + Node.js + Google Cloud Platform (Cloud Build, Cloud Run, Firestore, Cloud Functions, Cloud Storage, Container Registry). The project enables the user to build legal document templates and define personalized questions. The consumer can then answer those questions to generate the final document. There is also an automator which takes the document and registers it in the proper legal entity at a low cost."
       },
       {
-        type: "Professional experience",
+        type: "Professional",
         title: "GlicoCONNECT",
         url: "",
         desc:
