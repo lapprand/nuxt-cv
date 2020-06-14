@@ -20,11 +20,6 @@ export default {
       type: Boolean,
       default: false,
       required: false
-    },
-    onItemClick: {
-      type: Function,
-      default: () => {},
-      required: false
     }
   },
   data() {
@@ -32,6 +27,10 @@ export default {
       slideGroup: null
     }
   },
-  methods: {}
+  methods: {
+    onItemClick(image) {
+      this.$emit("onItemClick", image)
+    }
+  }
 }
 </script>

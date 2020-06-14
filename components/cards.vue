@@ -17,7 +17,7 @@
                   p.body-1(v-html='work.desc')
               v-row.pb-4(v-if='work.images' dense justify='center')
                 v-col(cols="auto")
-                  ImageSlideGroup(:images='work.images' :imageItemWidth='60' :onItemClick='openImageDialog')
+                  ImageSlideGroup(:images='work.images' :imageItemWidth='60' @onItemClick='openImageDialog')
     v-row(no-gutters)
       v-col
         v-card.mb-4(outlined)
