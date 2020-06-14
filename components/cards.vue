@@ -42,15 +42,6 @@
             div.subtitle-1.font-weight-medium.mb-2 {{ $t('education.degree') }}
             p.body-1 {{ $t('education.degreeDesc') }}
             p.body-1 {{ $t('education.internship') }}
-    v-dialog(v-model='isImageDialogOpened' max-width="600" :fullscreen='isMobile')
-      v-card()
-        v-container
-          v-row(justify='center')
-            v-col(cols='auto')
-              v-img(:src='selectedImg' max-height='83vh' contain)
-          v-row(justify='end')
-            v-col(cols='auto')
-              v-btn(@click="isImageDialogOpened = false" outlined color='primary') {{ $t('defaults.close') }}
 </template>
 
 <script>
@@ -62,9 +53,7 @@ export default {
   },
   data() {
     return {
-      isImageDialogOpened: false,
-      slideGroup: null,
-      selectedImg: ""
+      slideGroup: null
     }
   },
   computed: {
