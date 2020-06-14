@@ -16,7 +16,7 @@
               v-btn(v-show="selectedImgIndex < images.length - 1" @click="nextImage" fab absolute right small color="primary" style="top: 45%;")
                 v-icon mdi-chevron-right
               perfect-scrollbar.scroll-area
-                v-img(:src='images[selectedImgIndex]' max-height='75vh' contain)
+                v-img(:src='images[selectedImgIndex]' :max-height="isMobile ? 'calc(100vh - 108px)' : '75vh'" contain)
                   template(v-slot:placeholder)
                     ImagePlaceholder
           v-row(justify='end')
@@ -74,6 +74,6 @@ export default {
 
 <style lang="scss" scoped>
 .scroll-area {
-  height: 75vh;
+  height: 100%;
 }
 </style>
