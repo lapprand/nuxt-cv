@@ -7,9 +7,9 @@
             template(v-slot:placeholder)
               ImagePlaceholder
     v-dialog(v-model='isImageDialogOpened' max-width="600" :fullscreen='isMobile')
-      v-card()
+      v-card
         v-container
-          v-row(justify='center')
+          v-row(justify='center' v-touch="{ left: () => nextImage(), right: () => prevImage() }")
             v-col(cols='auto')
               v-btn(v-show="selectedImgIndex > 0" @click="prevImage" fab absolute left small color="primary" style="top: 45%;")
                 v-icon mdi-chevron-left
@@ -63,10 +63,14 @@ export default {
       this.isImageDialogOpened = true
     },
     nextImage() {
-      this.selectedImgIndex++
+      if (this.selectedImgIndex < this.images.length - 1) {
+        this.selectedImgIndex++
+      }
     },
     prevImage() {
-      this.selectedImgIndex--
+      if (this.selectedImgIndex > 0) {
+        this.selectedImgIndex--
+      }
     }
   }
 }
