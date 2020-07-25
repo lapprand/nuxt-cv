@@ -16,7 +16,7 @@
       v-container(fluid fill-height)
         v-row.align-self-stretch(justify='center' align='start')
           v-col.info-col(cols=5 lg=4)
-            mdAndUpInfo(v-if="windowSize.y > 700")
+            mdAndUpInfo(v-if="windowSize.y > 750")
             xsOnlyInfo(v-else)
           v-col(cols=7 lg=6)
             cards

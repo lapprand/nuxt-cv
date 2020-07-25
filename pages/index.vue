@@ -9,16 +9,16 @@
   border-radius: 4px;
 }
 .gradient {
-  background: #2193b0; /* fallback for old browsers */
+  background: #06beb6; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to bottom,
-    #6dd5ed,
-    #2193b0
+    #48b1bf,
+    #06beb6
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to bottom,
-    #6dd5ed,
-    #2193b0
+    #48b1bf,
+    #06beb6
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .v-card {

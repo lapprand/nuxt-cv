@@ -1,7 +1,7 @@
 <template lang="pug">
   v-row.hidden-print-only(justify='center')
     v-col(cols='auto')
-      v-btn.mx-1(v-for='locale in $i18n.locales' :key="locale.code" :to='switchLocalePath(locale.code)' icon large outlined color='white')
+      v-btn.mx-1(v-for='locale in $i18n.locales' :key="locale.code" :to='switchLocalePath(locale.code)' icon large color='white')
         client-only
           v-icon(v-if="locale.code === 'pt'") $vuetify.icons.brFlag
           v-icon(v-if="locale.code === 'en'") $vuetify.icons.usFlag
