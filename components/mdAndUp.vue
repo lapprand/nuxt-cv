@@ -5,17 +5,20 @@
 
 .info-col {
   position: sticky;
-  transform: translateY(calc(50vh - 50% - 12px));
   top: 12px;
+}
+
+.sticky-center {
+  transform: translateY(calc(50vh - 50% - 12px));
 }
 </style>
 
 <template lang="pug">
   v-content
     perfect-scrollbar.cards-scroll-area
-      v-container(fluid fill-height)
+      v-container#mdAndUpContainer(fluid)
         v-row.align-self-stretch(justify='center' align='start')
-          v-col.info-col(cols=5 lg=4)
+          v-col.info-col(cols=5 lg=4 :class="{ 'sticky-center': hasScroll }")
             mdAndUpInfo(v-if="windowSize.y > 750")
             xsOnlyInfo(v-else)
           v-col(cols=7 lg=6)
@@ -35,7 +38,14 @@ export default {
     xsOnlyInfo: xsOnlyInfo
   },
   computed: {
-    ...mapFields("", ["windowSize"])
+    ...mapFields("", ["windowSize"]),
+    hasScroll() {
+      const mdAndUpContainer = document.getElementById("mdAndUpContainer")
+      return (
+        this.windowSize.y <
+        (mdAndUpContainer ? mdAndUpContainer.clientHeight : 0)
+      )
+    }
   }
 }
 </script>
