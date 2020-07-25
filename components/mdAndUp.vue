@@ -5,6 +5,7 @@
 
 .info-col {
   position: sticky;
+  transform: translateY(calc(50vh - 50% - 12px));
   top: 12px;
 }
 </style>

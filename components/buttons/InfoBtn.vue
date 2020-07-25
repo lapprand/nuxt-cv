@@ -1,7 +1,7 @@
 <template lang="pug">
   v-btn(text color='white' :icon='$vuetify.breakpoint.xsOnly' @click.stop="$emit('click')")
     v-icon(:class="$vuetify.breakpoint.smAndUp ? 'pr-2' : ''") {{ icon }}
-    span(v-show='$vuetify.breakpoint.smAndUp && windowSize.y > 700') {{ text }}
+    span(v-show='$vuetify.breakpoint.smOnly || ($vuetify.breakpoint.mdAndUp && windowSize.y > 700)') {{ text }}
 </template>
 
 <script>
