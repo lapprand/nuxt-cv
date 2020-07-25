@@ -3,37 +3,18 @@
     v-container
       v-row
         v-col
-          v-card.primary(height='100%')
-            v-container(fluid fill-height align-start)
-              v-row
-                v-col
-                  v-row(justify='center')
-                    v-col(cols='auto')
-                      div.profile-wrap
-                        v-img.profile(:src='require("../static/profile.webp")' aspect-ratio="1" contain height="200px" width="200px")
-                  v-row.white--text
-                    v-col.text-center
-                      div.mb-3.display-1.font-weight-bold {{ $t('info.name') }}
-                      div.mb-3.title.font-weight-medium(v-html="$t('info.job')")
-                v-divider(vertical)
-                v-col(cols='auto' align-self='center')
-                  optionBtns
-                  v-row(v-for="(infoBtn, index) of infoBtns" :key='index')
-                    v-col.text-start
-                      InfoBtn(:icon="infoBtn.icon" :text="infoBtn.text" @click="infoBtn.action")
+          smOnlyInfo
       cards
 </template>
 
 <script>
 import cards from "./cards"
-import optionBtns from "./optionBtns"
-import InfoBtn from "./buttons/InfoBtn"
+import smOnlyInfo from "./smOnlyInfo"
 
 export default {
   components: {
     cards: cards,
-    optionBtns: optionBtns,
-    InfoBtn
+    smOnlyInfo: smOnlyInfo
   },
   data() {
     return {
