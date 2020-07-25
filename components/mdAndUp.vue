@@ -10,40 +10,31 @@
 </style>
 
 <template lang="pug">
-  v-content(v-resize="onResize")
+  v-content
     perfect-scrollbar.cards-scroll-area
       v-container(fluid fill-height)
         v-row.align-self-stretch(justify='center' align='start')
           v-col.info-col(cols=5 lg=4)
-            mdAndUpInfo
+            mdAndUpInfo(v-if="windowSize.y > 700")
+            xsOnlyInfo(v-else)
           v-col(cols=7 lg=6)
             cards
 </template>
 
 <script>
+import { mapFields } from "vuex-map-fields"
 import cards from "./cards"
 import mdAndUpInfo from "./mdAndUpInfo"
+import xsOnlyInfo from "./xsOnlyInfo"
 
 export default {
   components: {
     cards: cards,
-    mdAndUpInfo: mdAndUpInfo
+    mdAndUpInfo: mdAndUpInfo,
+    xsOnlyInfo: xsOnlyInfo
   },
-  data() {
-    return {
-      windowSize: {
-        x: 0,
-        y: 0
-      }
-    }
-  },
-  mounted() {
-    this.onResize()
-  },
-  methods: {
-    onResize() {
-      this.windowSize = { x: window.innerWidth, y: window.innerHeight }
-    }
+  computed: {
+    ...mapFields("", ["windowSize"])
   }
 }
 </script>

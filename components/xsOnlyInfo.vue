@@ -15,7 +15,7 @@
           v-divider
           v-row(justify='center')
             v-col(v-for="(infoBtn, index) of infoBtns" :key='index' cols='auto')
-              InfoBtn(:icon="infoBtn.icon" :text="infoBtn.text" @click="infoBtn.action")
+              InfoBtn(:icon="infoBtn.icon" :text="infoBtn.text" :windowSize="windowSize" @click="infoBtn.action")
 </template>
 
 <script>
@@ -26,6 +26,17 @@ export default {
   components: {
     optionBtns: optionBtns,
     InfoBtn
+  },
+  props: {
+    windowSize: {
+      type: Object,
+      default: () => {
+        return {
+          x: 0,
+          y: 0
+        }
+      }
+    }
   },
   data() {
     return {

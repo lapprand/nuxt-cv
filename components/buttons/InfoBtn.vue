@@ -1,10 +1,12 @@
 <template lang="pug">
   v-btn(text color='white' :icon='$vuetify.breakpoint.xsOnly' @click.stop="$emit('click')")
     v-icon(:class="$vuetify.breakpoint.smAndUp ? 'pr-2' : ''") {{ icon }}
-    span(v-show='$vuetify.breakpoint.smAndUp') {{ text }}
+    span(v-show='$vuetify.breakpoint.smAndUp && windowSize.y > 700') {{ text }}
 </template>
 
 <script>
+import { mapFields } from "vuex-map-fields"
+
 export default {
   props: {
     icon: {
@@ -15,6 +17,9 @@ export default {
       type: String,
       default: ""
     }
+  },
+  computed: {
+    ...mapFields("", ["windowSize"])
   }
 }
 </script>

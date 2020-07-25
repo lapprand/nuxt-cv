@@ -24,7 +24,7 @@
 </style>
 
 <template lang="pug">
-  v-app
+  v-app(v-resize="onResize")
     xsOnly(v-if='$vuetify.breakpoint.xsOnly')
     smOnly(v-else-if='$vuetify.breakpoint.smOnly')
     mdAndUp(v-else-if='$vuetify.breakpoint.mdAndUp')
@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import { mapFields } from "vuex-map-fields"
 import mdAndUp from "~/components/mdAndUp"
 import smOnly from "~/components/smOnly"
 import xsOnly from "~/components/xsOnly"
@@ -41,6 +42,17 @@ export default {
     mdAndUp,
     smOnly,
     xsOnly
+  },
+  computed: {
+    ...mapFields("", ["windowSize"])
+  },
+  mounted() {
+    this.onResize()
+  },
+  methods: {
+    onResize() {
+      this.windowSize = { x: window.innerWidth, y: window.innerHeight }
+    }
   }
 }
 </script>

@@ -2,7 +2,12 @@ import { getField, updateField } from "vuex-map-fields"
 
 export const strict = false
 
-export const state = () => ({})
+export const state = () => ({
+  windowSize: {
+    x: 0,
+    y: 0
+  }
+})
 
 export const getters = {
   getField
