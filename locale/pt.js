@@ -4,7 +4,7 @@ export default {
   },
   info: {
     name: "Arthur Barros Lapprand",
-    job: "Desenvolvedor para a nuvem e desenvolvedor Android",
+    job: "Desenvolvedor para a nuvem<br>e desenvolvedor Android",
     github: "https://github.com/lapprand",
     linkedin: "https://www.linkedin.com/in/lapprand/",
     email: "mailto:lapprand@gmail.com"

@@ -11,9 +11,9 @@
         v-container
           v-row(justify='center' v-touch="{ left: () => nextImage(), right: () => prevImage() }")
             v-col(cols='auto')
-              v-btn(v-show="selectedImgIndex > 0" @click="prevImage" fab absolute left small color="primary" style="top: 45%;")
+              v-btn(v-show="!isMobile && selectedImgIndex > 0" @click="prevImage" fab absolute left small color="primary" style="top: 45%;")
                 v-icon mdi-chevron-left
-              v-btn(v-show="selectedImgIndex < images.length - 1" @click="nextImage" fab absolute right small color="primary" style="top: 45%;")
+              v-btn(v-show="!isMobile && selectedImgIndex < images.length - 1" @click="nextImage" fab absolute right small color="primary" style="top: 45%;")
                 v-icon mdi-chevron-right
               perfect-scrollbar.scroll-area
                 v-img(:src='images[selectedImgIndex]' :max-height="isMobile ? 'calc(100vh - 160px)' : '75vh'" contain)
@@ -21,17 +21,22 @@
                     ImagePlaceholder
           v-row(justify='end')
             v-col(cols='auto')
+              v-btn(v-show="isMobile && selectedImgIndex > 0" @click="prevImage" fab absolute left small color="primary" style="top: 45%;")
+                v-icon mdi-chevron-left
+              v-btn(v-show="isMobile && selectedImgIndex < images.length - 1" @click="nextImage" fab absolute right small color="primary" style="top: 45%;")
+                v-icon mdi-chevron-right
+            v-col(cols='auto')
               v-btn(@click="isImageDialogOpened = false" color='primary') {{ $t('defaults.close') }}
 </template>
 
 <script>
 import ImagePlaceholder from "./imagePlaceholder"
-import { Touch } from "vuetify/lib/directives"
+// import { Touch } from "vuetify/lib/directives"
 
 export default {
-  directives: {
-    Touch
-  },
+  // directives: {
+  //   Touch
+  // },
   components: {
     ImagePlaceholder
   },

@@ -15,7 +15,7 @@
                   v-row.white--text
                     v-col.text-center
                       div.mb-3.headline.font-weight-bold {{ $t('info.name') }}
-                      div.mb-3.subtitle-1.font-weight-medium {{ $t('info.job') }}
+                      div.mb-3.subtitle-1.font-weight-medium(v-html="$t('info.job')")
                   v-divider
                   v-row(justify='center')
                     v-col(v-for="(infoBtn, index) of infoBtns" :key='index' cols='auto')

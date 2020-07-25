@@ -21,7 +21,7 @@
                   v-row.white--text
                     v-col.text-center
                       div.mb-3.display-1.font-weight-bold {{ $t('info.name') }}
-                      div.mb-3.title.font-weight-medium {{ $t('info.job') }}
+                      div.mb-3.title.font-weight-medium(v-html="$t('info.job')")
                   v-divider
                   v-row(justify='center')
                     v-col(cols='auto')
