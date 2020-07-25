@@ -1,7 +1,4 @@
 <style lang="scss">
-.stretch {
-  align-self: stretch;
-}
 .profile-wrap {
   filter: drop-shadow(0px 4px 2px rgba(50, 50, 50, 0.5));
 }
@@ -29,8 +26,8 @@
 <template lang="pug">
   v-app
     xsOnly(v-if='$vuetify.breakpoint.xsOnly')
-    smOnly(v-if='$vuetify.breakpoint.smOnly')
-    mdAndUp(v-if='$vuetify.breakpoint.mdAndUp')
+    smOnly(v-else-if='$vuetify.breakpoint.smOnly')
+    mdAndUp(v-else-if='$vuetify.breakpoint.mdAndUp')
 
 </template>
 

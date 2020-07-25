@@ -28,9 +28,53 @@ export default {
     { src: "~/plugins/vueFlagIcon.js", mode: "client" },
     { src: "~/plugins/vuePerfectScrollbar.js", mode: "client" }
   ],
-  modules: ["nuxt-i18n"],
-  buildModules: ["@nuxtjs/vuetify"],
-
+  modules: [
+    "nuxt-i18n",
+    [
+      "@nuxtjs/vuetify",
+      {
+        defaultAssets: {
+          font: {
+            family: "Roboto"
+          },
+          icons: "mdi"
+        },
+        icons: {
+          values: {
+            brFlag: {
+              component: "flag",
+              props: {
+                iso: "br"
+              }
+            },
+            usFlag: {
+              component: "flag",
+              props: {
+                iso: "us"
+              }
+            }
+          }
+        },
+        theme: {
+          dark: false,
+          themes: {
+            light: {
+              primary: colors.lightBlue,
+              secondary: colors.grey.darken1,
+              accent: colors.shades.black,
+              error: colors.red.accent3
+            },
+            dark: {
+              primary: colors.lightGreen.darken1,
+              secondary: colors.grey.darken1,
+              accent: colors.shades.black,
+              error: colors.red.accent3
+            }
+          }
+        }
+      }
+    ]
+  ],
   i18n: {
     locales: [
       {
@@ -48,49 +92,6 @@ export default {
       messages: {
         en: en,
         pt: pt
-      }
-    }
-  },
-
-  // Vuetify options
-  vuetify: {
-    defaultAssets: {
-      font: {
-        family: "Roboto"
-      },
-      icons: "mdi"
-    },
-    icons: {
-      values: {
-        brFlag: {
-          component: "flag",
-          props: {
-            iso: "br"
-          }
-        },
-        usFlag: {
-          component: "flag",
-          props: {
-            iso: "us"
-          }
-        }
-      }
-    },
-    theme: {
-      dark: false,
-      themes: {
-        light: {
-          primary: colors.lightBlue,
-          secondary: colors.grey.darken1,
-          accent: colors.shades.black,
-          error: colors.red.accent3
-        },
-        dark: {
-          primary: colors.lightGreen.darken1,
-          secondary: colors.grey.darken1,
-          accent: colors.shades.black,
-          error: colors.red.accent3
-        }
       }
     }
   },

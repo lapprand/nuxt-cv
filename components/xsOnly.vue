@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-content(v-if='$vuetify.breakpoint.smAndDown')
+  v-content
     v-container
       v-row
         v-col
