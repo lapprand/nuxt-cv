@@ -67,7 +67,7 @@ export default {
       {
         type: "Personal",
         title:
-          "<a href='https://manga-material.netlify.com/'>Manga Material</a>",
+          "<a href='https://mdc-manga.vercel.app/'>Manga Material</a>",
         desc:
           "A site I created for the sake of learning more about Material Design, JavaScript, TypeScript, SASS/SCSS and Webpack. It also features lazy loading of images, infinite scroll and state management. It acts as a client for the Jikan API. I used a mix of Google's Material Design and my own styles."
       },

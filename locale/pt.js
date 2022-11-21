@@ -66,7 +66,7 @@ export default {
       {
         type: "Pessoal",
         title:
-          "<a href='https://manga-material.netlify.com/'>Manga Material</a>",
+          "<a href='https://mdc-manga.vercel.app/'>Manga Material</a>",
         desc:
           "Projeto pessoal implementado para aprender mais sobre material design, JavaScript, TypeScript, SASS e webpack. O site conta com recursos como lazy loading de imagens, scroll infinito e gerenciamento de estado. Ele serve como um 'client' para a API Jikan. Além de adicionar estilos próprios ao site, segue-se algumas guias de Material Design sugeridas pelos 'Material Components' para a web."
       },

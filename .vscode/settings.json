@@ -9,5 +9,8 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    "deno.enable": false
+    "deno.enable": false,
+    "i18n-ally.localesPaths": [
+        "locale"
+    ]
 }
